@@ -1,0 +1,33 @@
+// Requirements
+// ============
+
+//Make sure compass, sass, susy, and breakpoint gems are up-to-date.
+
+@import normalize
+@import compass
+@import susy
+@import breakpoint
+
++border-box-sizing
+
+//Configure these to personalise project
+$column-number: 12
+$column-width: 60px
+$gutter-ratio: 1/3
+
+//More configs, determine px width of different devices/orientations
+$desktop: 1280px
+$tablet-landscape: 1024px
+$tablet-portrait: 728px
+$mobile-landscape: 480px
+$mobile-portrait: 320px
+
+//setting up media queries based on above values
+$media-tablet-landscape: 'screen and (max-width:1024px)'
+$media-tablet-portrait: 'screen and (max-width:728px)'
+$media-mobile-landscape: 'screen and (max-width:480px)'
+$media-mobile-portrait: 'screen and (max-width:320px)'
+
+// Configuring Susy Defaults
+$susy: (global-box-sizing: border-box, use-custom: (rem: true), columns: $column-number, column-width: $column-width, gutters: $gutter-ratio)
+
