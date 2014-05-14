@@ -10,8 +10,8 @@
 
 +border-box-sizing
 
-//Configure these to personalise project
-$column-number: 12
+//Configure these to personalise project. Mobile-first approach
+$column-number: 4
 $column-width: 60px
 $gutter-ratio: 1/3
 
@@ -22,11 +22,11 @@ $tablet-portrait: 728px
 $mobile-landscape: 480px
 $mobile-portrait: 320px
 
-//setting up media queries based on above values
-$media-tablet-landscape: 'screen and (max-width:1024px)'
-$media-tablet-portrait: 'screen and (max-width:728px)'
-$media-mobile-landscape: 'screen and (max-width:480px)'
-$media-mobile-portrait: 'screen and (max-width:320px)'
+//setting up smelly media queries based on above values. Breakpoint works better.
+// $media-tablet-landscape: 'screen and (max-width:1024px)'
+// $media-tablet-portrait: 'screen and (max-width:728px)'
+// $media-mobile-landscape: 'screen and (max-width:480px)'
+// $media-mobile-portrait: 'screen and (max-width:320px)'
 
 // Configuring Susy Defaults
 $susy: (global-box-sizing: border-box, use-custom: (rem: true), columns: $column-number, column-width: $column-width, gutters: $gutter-ratio)

@@ -3,48 +3,86 @@
 
 @import grids
 
-//Styles for AG grids & Container
+//Styles for AG grids & Container. Mobile-first.
 .container
   background-color: #fbeecb
-  +container($desktop)
+  +container($mobile-landscape)
   +clearfix
+  +breakpoint($tablet-portrait)
+    +container($tablet-portrait)
+    background-color: #E5FACA
+  +breakpoint($desktop)
+    +container($desktop)
+    background-color: blue
 
 .ag1
   background-color: #71dad2
-  +span(2 of 12)
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(2 of 8)
+  +breakpoint($desktop)
+    +span(2 of 12)
 
 .ag2
   background-color: #fae7b3
-  +span(8 of 12)
-  +clearfix
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(4 of 8)
+  +breakpoint($desktop)
+    +span(8 of 12)
 
 .ag3
+  // @extend .ag1
+  // +last
   background-color: #71dad2
-  +span(2 of 12 last)
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(2 of 8 last)
+  +breakpoint($desktop)
+    +span(2 of 12 last)
 
 .ag4,.ag5,.ag8,.ag9
   background-color: #ee9e9c
 
 .ag4
-  +span(4 of 8)
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(2 of 4)
+  +breakpoint($desktop)
+    +span(4 of 8)
 
 .ag5
-  +span(4 of 8 last)
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(full)
+  +breakpoint($desktop)
+    +span(4 of 8 last)
 
 .ag6
   background-color: #f09671
-  +span(3 of 8)
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(full)
+  +breakpoint($desktop)
+    +span(3 of 8)
 
 .ag7
   background-color: #f6d784
-  +span(5 of 8 last)
   +clearfix
+  +span(full)
+  +breakpoint($desktop)
+    +span(5 of 8 last)
+  
 
 .ag8
-  +span(2 of 5)
+  +span(2 of 4)
+  +breakpoint($desktop)
+    +span(2 of 5)
 
 .ag9
-  +span(2 of 5 last)
+  +span(2 of 4 last)
+  +breakpoint($desktop)
+    +span(2 of 5 last)
 
 .ag10
   background-color: #ea9fc3
@@ -58,8 +96,8 @@ h2
   padding-top: 1.8rem
   padding-bottom: 1.8rem
 
-//Testing Media Queries
+// //Testing Smelly Media Queries
 
-@media #{$media-tablet-landscape}
-  .ag1
-    background-color: blue
+// @media #{$media-tablet-landscape}
+//   .ag1
+//     background-color: blue
