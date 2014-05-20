@@ -8,16 +8,16 @@
     <title>Fortnum &amp; Mason Dot London</title>
 
     <!-- Icons -->
-<!--     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png"> -->
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
 
     <!-- CSS & JS -->
-    <!-- <script type="text/javascript" src="fonts/fonts.js"></script> -->
+    <script type="text/javascript" src="fonts/fonts.js"></script>
     <link rel="stylesheet" href="stylesheets/fm-london.css">
     <link rel="stylesheet" href="stylesheets/application.css">
-    <!-- <link rel="stylesheet" href="stylesheets/fm-london-icons.css"> -->
+    <link rel="stylesheet" href="stylesheets/fm-london-icons.css">
 </head>
 <body>
 <!--  
@@ -45,30 +45,43 @@
   <div id="hero-container" class="container">
 
     <div class="section-summary">
-      <h2>Introducing the best of British and the World</h2>
-      <h3 class="sub-header">FORTNUM &amp; MASON</h3>
-      <p class="intro">For three centuries Fortnum's has been committed to bringing the world's and British's best food to Piccadilly. We take extraordinary care over the origins of everything we sell. Every sprout, lobster, truckle and rib comes direct from suppliers we know intimately.</p>
-      <p class="section-summary-images"><img src="/images/royal_warrant1.png" alt=""><img src="/images/royal_warrant2.png" alt=""></p>
-      <p class="more-info"><a href="http://www.fortnumandmason.com/c-358-our-history-fortnum-and-mason.aspx" class="button">READ OUR FULL HISTORY</a></p>
+      <div class="subwrapper">
+        <h2>Introducing the best of British and the World</h2>
+        <h3 class="sub-header">FORTNUM &amp; MASON</h3>
+        <p class="intro">For three centuries Fortnum's has been committed to bringing the world's and British's best food to Piccadilly. We take extraordinary care over the origins of everything we sell. Every sprout, lobster, truckle and rib comes direct from suppliers we know intimately.</p>
+        <p class="section-summary-images">
+          <img src="images/royal_warrant1.png" alt="">
+          <img src="images/royal_warrant2.png" alt="">
+        </p>
+        <p class="more-info">
+          <a href="http://www.fortnumandmason.com/c-358-our-history-fortnum-and-mason.aspx" class="button">READ OUR FULL HISTORY</a>
+        </p>
+      </div>
     </div> <!-- Closing section summary -->
 
     <div class="first-element">
-      <h3>Piccadilly</h3>
-      <h4>OPENING HOURS</h4>
-      <p>Monday to Saturday 10am - 9pm</p>
-      <p>Sunday 12pm - 6pm</p>
-      <h4>LOCATION</h4>
-      <p>181 Piccadilly</p>
-      <p>London W1A 1ER</p>
-      <p>United Kingdom</p>
-      <h4>OUR SERVICES</h4>
-      <p>Tea salons, restaurants and cafes</p>
-      <p>In-store concierge</p>
-      <p>Custom Hampers</p>
-      <p>Personalised gifts</p>
-      <p>Beauty room</p>
-      <div class="line"></div>
-      <p class="more-info"><a href="#" class="button">MORE STORE DETAILS</a></p>
+      <div class="noticeboard-wrapper">
+        <div class="noticeboard-border">
+          <div class="noticeboard">
+            <h3>Piccadilly</h3>
+            <h4>OPENING HOURS</h4>
+            <p>Monday to Saturday 10am - 9pm</p>
+            <p>Sunday 12pm - 6pm</p>
+            <h4>LOCATION</h4>
+            <p>181 Piccadilly</p>
+            <p>London W1A 1ER</p>
+            <p>United Kingdom</p>
+            <h4>OUR SERVICES</h4>
+            <p>Tea salons, restaurants and cafes</p>
+            <p>In-store concierge</p>
+            <p>Custom Hampers</p>
+            <p>Personalised gifts</p>
+            <p>Beauty room</p>
+            <div class="line"></div>
+            <p class="more-info"><a href="#" class="button">MORE STORE DETAILS</a></p>
+          </div>
+        </div>
+      </div>
   </div> <!-- closing first-element -->
 
     <div class="second-element">
@@ -83,7 +96,10 @@
 
 <!-- END Hero/About Section -->
 
-
+<!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/canvas-menu.js"></script>
+    <script type="text/javascript" src="javascripts/sticky-nav.js"></script>
 
 </body>
 </html>

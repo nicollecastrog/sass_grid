@@ -1,12 +1,6 @@
 @import grids
 
-body
-  margin: 0px 0px 0px 0px
-  font-family: GillSans
-  background-color: #F7F3ED
-  color: #5E5E57
-
-//Styles for FM grid & Container. Mobile-first approach.
+// Styles for FM grid & Container. Mobile-first approach.
 .container
   +container($mobile-landscape)
   z-index: 1
@@ -21,16 +15,204 @@ body
     // more tablet/ipad-landscape styles go here
 
 
-// *** HERO/ABOUT section styles.
+
+/* colours */
+$default-text-color: #5E5E57
+$header-text-color: #262623
+$default-bg-color: #F7F3ED
+$mobile-nav-bg-color: #EDE6DD
+$info-panel-bg-color: #e4ddd4
+$default-button-color: #A6A69A
+$highlight-text-color: #7bafa4
+$highlight-button-color: #84c8bb
+$gold-button-color: #88773f
+
+/* fonts */
+.GillSans-bold-italic 
+  font-family: GillSansMTStd-MediumItalic
+  font-weight: normal
+  font-style: normal
+
+.GillSans-normal-normal 
+  font-family: GillSansMTStd-Light
+  font-weight: normal
+  font-style: normal
+
+.GillSans-normal-italic 
+  font-family: GillSansMTStd-LightItalic
+  font-weight: normal
+  font-style: normal
+
+.GillSans-bold-normal 
+  font-family: GillSansMTStd-Medium
+  font-weight: normal
+  font-style: normal
+
+.LevatoPro-Regular 
+  font-family: LevatoPro-Regular
+  font-weight: normal
+  font-style: normal
+
+body
+  @extend .GillSans-normal-normal
+  margin: 0px 0px 0px 0px
+  background-color: $default-bg-color
+  color: $default-text-color
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 0
+  font-size: inherit
+
+h1, h2, h3
+  @extend .LevatoPro-Regular
+  color: $header-text-color
+  line-height: 1.1em
+
+h4, h5, h6
+  @extend .GillSans-bold-normal
+  color: $header-text-color
+
+h4, h5, h6
+  color: $default-text-color
+
+p
+  margin-bottom: 5px
+
+a
+  color: $header-text-color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+/* Links/Buttons */
+
+.button
+  @extend .GillSans-bold-normal
+  border-style: none
+  background-color: $default-button-color
+  color: white
+  font-size: 1em
+  /* letter-spacing: 0.75px*/
+  padding: 6px 5px 4px 5px
+  /*font-family: GillSans-bold-normal*/
+  &.highlight
+    background-color: $highlight-button-color
+  &:hover
+    text-decoration: none
+    background-color: $gold-button-color
+
+.take-action
+  @extend .GillSans-bold-normal
+  border-style: none
+  background-color: #84c8bb
+  color: white
+  font-size: 12px
+  letter-spacing: 0.75px
+  padding: 5px
+  margin: 10px 0px 10px 0px
+
+/* Overall Styles (repeated in several sections) */
 
 .section-image
   +span(full)
   height: 300px
   overflow: hidden
+  margin-bottom: 20px
+  z-index: -1
   +clearfix
+
+.section-summary
+  background-color: white
+  margin-top: -200px
+  z-index: 1
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(4 of 8 last)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12 last)
+  .subwrapper
+    padding: 20px
+    +breakpoint($tablet-landscape)
+      border: 14px solid $default-bg-color
+  h2
+    font-size: 2.25em
+    margin-bottom: 10px
+  h3.subheader
+    @extend .GillSans-bold-normal
+    color: $highlight-text-color
+    font-size: 1.125em
+    margin-bottom: 10px
+  p.intro
+    font-size: 1.125em
+  .section-summary-images
+    padding: 20px 0px 0px 0px
+    img
+      padding-right: 10px
+  .more-info
+    margin-top: 20px
+
+.first-element
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(4 of 8)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12)
+  .noticeboard-wrapper
+    padding: 10px
+    background-color: $info-panel-bg-color
+  .noticeboard-border
+    padding: 20px
+    border: 1px solid $gold-button-color
+    background-color: $info-panel-bg-color
+  .noticeboard
+    text-align: center
+    h3
+      font-size: 2.25em
+      margin-top: 5px
+    h4
+      margin-top: 10px  
+  .line
+    border-top: 1px solid $gold-button-color
+    margin: 15px 0px 20px 0px
+
+.second-element
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(full)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12)
+    padding-left: 12px
+
+.second-element-A
+  +span(full)
+  width: 100%
+  margin-bottom: 20px
+  +breakpoint($tablet-portrait)
+    +span(4 of 8)
+    float: left
+  +breakpoint($tablet-landscape)
+    +span(full)
+
+.second-element-B
+  +span(full)
+  width: 100%
+  +breakpoint($tablet-portrait)
+    +span(4 of 8 last)
+    float: left
+    margin-right: 0px
+  +breakpoint($tablet-landscape)
+    +span(full)
+
+// *** HERO/ABOUT section- specific styles.
 
 #hero-image
   +span(full last)
+  z-index: -1
   display: block
   background-image: url('../images/hero-storefront.jpg')
   height: 100%
@@ -54,47 +236,3 @@ body
 
 #hero-container
   overflow: visible
-
-#hero-container p
-  display: block
-
-.section-summary
-  display: inline-block
-  +span(full)
-  +breakpoint($tablet-portrait)
-    +span(4 of 8 last)
-  +breakpoint($tablet-landscape)
-    +span(4 of 12 last)
-
-.first-element
-  +span(full)
-  +breakpoint($tablet-portrait)
-    +span(4 of 8)
-  +breakpoint($tablet-landscape)
-    +span(4 of 12)
-
-.second-element
-  +span(full)
-  +breakpoint($tablet-portrait)
-    +span(full)
-  +breakpoint($tablet-landscape)
-    +span(4 of 12)
-
-.second-element-A
-  +span(full)
-  width: 100%
-  +breakpoint($tablet-portrait)
-    +span(4 of 8)
-    float: left
-  +breakpoint($tablet-landscape)
-    +span(full)
-
-.second-element-B
-  +span(full)
-  width: 100%
-  +breakpoint($tablet-portrait)
-    +span(4 of 8 last)
-    float: left
-    margin-right: 0px
-  +breakpoint($tablet-landscape)
-    +span(full)
