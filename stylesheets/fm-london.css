@@ -444,7 +444,6 @@ th {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  z-index: 1;
   overflow: visible;
   overflow: hidden;
   *zoom: 1;
@@ -486,42 +485,42 @@ th {
 
 /* colours */
 /* fonts */
-/* line 31, ../sass/fm-london.sass */
+/* line 30, ../sass/fm-london.sass */
 .GillSans-bold-italic {
   font-family: GillSansMTStd-MediumItalic;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 36, ../sass/fm-london.sass */
+/* line 35, ../sass/fm-london.sass */
 .GillSans-normal-normal, body {
   font-family: GillSansMTStd-Light;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 41, ../sass/fm-london.sass */
+/* line 40, ../sass/fm-london.sass */
 .GillSans-normal-italic {
   font-family: GillSansMTStd-LightItalic;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 46, ../sass/fm-london.sass */
-.GillSans-bold-normal, h4, h5, h6, .button, .take-action, .section-summary h3.subheader {
+/* line 45, ../sass/fm-london.sass */
+.GillSans-bold-normal, h4, h5, h6, .button, .take-action, .section-summary h3.sub-header {
   font-family: GillSansMTStd-Medium;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 51, ../sass/fm-london.sass */
+/* line 50, ../sass/fm-london.sass */
 .LevatoPro-Regular, h1, h2, h3 {
   font-family: LevatoPro-Regular;
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 56, ../sass/fm-london.sass */
+/* line 55, ../sass/fm-london.sass */
 body {
   margin: 0px 0px 0px 0px;
   background-color: #f7f3ed;
@@ -531,46 +530,46 @@ body {
 }
 
 /* Typography */
-/* line 66, ../sass/fm-london.sass */
+/* line 65, ../sass/fm-london.sass */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
   font-size: inherit;
 }
 
-/* line 71, ../sass/fm-london.sass */
+/* line 70, ../sass/fm-london.sass */
 h1, h2, h3 {
   color: #262623;
   line-height: 1.1em;
 }
 
-/* line 76, ../sass/fm-london.sass */
+/* line 75, ../sass/fm-london.sass */
 h4, h5, h6 {
   color: #262623;
 }
 
-/* line 80, ../sass/fm-london.sass */
+/* line 79, ../sass/fm-london.sass */
 h4, h5, h6 {
   color: #5e5e57;
 }
 
-/* line 83, ../sass/fm-london.sass */
+/* line 82, ../sass/fm-london.sass */
 p {
   margin-bottom: 5px;
 }
 
-/* line 86, ../sass/fm-london.sass */
+/* line 85, ../sass/fm-london.sass */
 a {
   color: #262623;
   text-decoration: none;
 }
-/* line 89, ../sass/fm-london.sass */
+/* line 88, ../sass/fm-london.sass */
 a:hover {
   text-decoration: underline;
 }
 
 /* Links/Buttons */
-/* line 94, ../sass/fm-london.sass */
+/* line 93, ../sass/fm-london.sass */
 .button {
   border-style: none;
   background-color: #a6a69a;
@@ -580,17 +579,17 @@ a:hover {
   padding: 6px 5px 4px 5px;
   /*font-family: GillSans-bold-normal */
 }
-/* line 103, ../sass/fm-london.sass */
+/* line 102, ../sass/fm-london.sass */
 .button.highlight {
   background-color: #84c8bb;
 }
-/* line 105, ../sass/fm-london.sass */
+/* line 104, ../sass/fm-london.sass */
 .button:hover {
   text-decoration: none;
   background-color: #88773f;
 }
 
-/* line 109, ../sass/fm-london.sass */
+/* line 108, ../sass/fm-london.sass */
 .take-action {
   border-style: none;
   background-color: #84c8bb;
@@ -602,7 +601,7 @@ a:hover {
 }
 
 /* Overall Styles (repeated in several sections) */
-/* line 121, ../sass/fm-london.sass */
+/* line 120, ../sass/fm-london.sass */
 .section-image {
   width: 100%;
   float: left;
@@ -610,156 +609,174 @@ a:hover {
   margin-right: 0;
   height: 300px;
   overflow: hidden;
-  margin-bottom: 20px;
-  z-index: -1;
   overflow: hidden;
   *zoom: 1;
 }
+@media (min-width: 768px) {
+  /* line 120, ../sass/fm-london.sass */
+  .section-image {
+    margin-bottom: 20px;
+  }
+}
 
-/* line 129, ../sass/fm-london.sass */
+/* line 128, ../sass/fm-london.sass */
 .section-summary {
   background-color: white;
-  margin-top: -200px;
-  z-index: 1;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 20px;
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  /* line 129, ../sass/fm-london.sass */
+  /* line 128, ../sass/fm-london.sass */
   .section-summary {
     width: 48.3871%;
     float: right;
     margin-right: 0;
+    margin-top: -150px;
+    margin-right: -15px;
+    width: 410px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 129, ../sass/fm-london.sass */
+  /* line 128, ../sass/fm-london.sass */
   .section-summary {
     width: 31.91489%;
     float: right;
     margin-right: 0;
+    margin-top: -200px;
+    margin-right: 20px;
   }
 }
-/* line 138, ../sass/fm-london.sass */
+/* line 143, ../sass/fm-london.sass */
 .section-summary .subwrapper {
   padding: 20px;
 }
-@media (min-width: 1024px) {
-  /* line 138, ../sass/fm-london.sass */
+@media (min-width: 768px) {
+  /* line 143, ../sass/fm-london.sass */
   .section-summary .subwrapper {
-    border: 14px solid #f7f3ed;
+    border: 20px solid #f7f3ed;
   }
 }
-/* line 142, ../sass/fm-london.sass */
+/* line 147, ../sass/fm-london.sass */
 .section-summary h2 {
   font-size: 2.25em;
   margin-bottom: 10px;
 }
-/* line 145, ../sass/fm-london.sass */
-.section-summary h3.subheader {
+/* line 150, ../sass/fm-london.sass */
+.section-summary h3.sub-header {
   color: #7bafa4;
   font-size: 1.125em;
   margin-bottom: 10px;
 }
-/* line 150, ../sass/fm-london.sass */
+/* line 155, ../sass/fm-london.sass */
 .section-summary p.intro {
   font-size: 1.125em;
 }
-/* line 152, ../sass/fm-london.sass */
+/* line 157, ../sass/fm-london.sass */
 .section-summary .section-summary-images {
   padding: 20px 0px 0px 0px;
 }
-/* line 154, ../sass/fm-london.sass */
+/* line 159, ../sass/fm-london.sass */
 .section-summary .section-summary-images img {
   padding-right: 10px;
 }
-/* line 156, ../sass/fm-london.sass */
+/* line 161, ../sass/fm-london.sass */
 .section-summary .more-info {
   margin-top: 20px;
 }
 
-/* line 159, ../sass/fm-london.sass */
+/* line 164, ../sass/fm-london.sass */
 .first-element {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 159, ../sass/fm-london.sass */
+  /* line 164, ../sass/fm-london.sass */
   .first-element {
     width: 48.3871%;
     float: left;
     margin-right: 3.22581%;
+    margin-right: 0px;
+    margin-bottom: 0px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 159, ../sass/fm-london.sass */
+  /* line 164, ../sass/fm-london.sass */
   .first-element {
     width: 31.91489%;
     float: left;
     margin-right: 2.12766%;
+    margin-right: 20px;
   }
 }
-/* line 165, ../sass/fm-london.sass */
+/* line 174, ../sass/fm-london.sass */
 .first-element .noticeboard-wrapper {
   padding: 10px;
   background-color: #e4ddd4;
 }
-/* line 168, ../sass/fm-london.sass */
+/* line 177, ../sass/fm-london.sass */
 .first-element .noticeboard-border {
   padding: 20px;
   border: 1px solid #88773f;
   background-color: #e4ddd4;
 }
-/* line 172, ../sass/fm-london.sass */
+/* line 183, ../sass/fm-london.sass */
 .first-element .noticeboard {
   text-align: center;
 }
-/* line 174, ../sass/fm-london.sass */
+/* line 185, ../sass/fm-london.sass */
 .first-element .noticeboard h3 {
   font-size: 2.25em;
   margin-top: 5px;
 }
-/* line 177, ../sass/fm-london.sass */
+/* line 188, ../sass/fm-london.sass */
 .first-element .noticeboard h4 {
   margin-top: 10px;
 }
-/* line 179, ../sass/fm-london.sass */
+/* line 190, ../sass/fm-london.sass */
 .first-element .line {
   border-top: 1px solid #88773f;
   margin: 15px 0px 20px 0px;
 }
 
-/* line 183, ../sass/fm-london.sass */
+/* line 194, ../sass/fm-london.sass */
 .second-element {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 183, ../sass/fm-london.sass */
+  /* line 194, ../sass/fm-london.sass */
   .second-element {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
+    margin-right: 0px;
+    margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 183, ../sass/fm-london.sass */
+  /* line 194, ../sass/fm-london.sass */
   .second-element {
     width: 31.91489%;
     float: left;
     margin-right: 2.12766%;
-    padding-left: 12px;
+    margin-right: 0px;
+    margin-top: 0px;
   }
 }
 
-/* line 191, ../sass/fm-london.sass */
+/* line 206, ../sass/fm-london.sass */
 .second-element-A {
   width: 100%;
   float: left;
@@ -769,16 +786,17 @@ a:hover {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 191, ../sass/fm-london.sass */
+  /* line 206, ../sass/fm-london.sass */
   .second-element-A {
     width: 48.3871%;
     float: left;
     margin-right: 3.22581%;
     float: left;
+    margin-right: 0px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 191, ../sass/fm-london.sass */
+  /* line 206, ../sass/fm-london.sass */
   .second-element-A {
     width: 100%;
     float: left;
@@ -787,40 +805,42 @@ a:hover {
   }
 }
 
-/* line 201, ../sass/fm-london.sass */
+/* line 217, ../sass/fm-london.sass */
 .second-element-B {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 201, ../sass/fm-london.sass */
+  /* line 217, ../sass/fm-london.sass */
   .second-element-B {
     width: 48.3871%;
     float: right;
     margin-right: 0;
     float: left;
     margin-right: 0px;
+    margin-left: 20px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 201, ../sass/fm-london.sass */
+  /* line 217, ../sass/fm-london.sass */
   .second-element-B {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
+    margin-left: 0px;
   }
 }
 
-/* line 213, ../sass/fm-london.sass */
+/* line 232, ../sass/fm-london.sass */
 #hero-image {
   width: 100%;
   float: right;
   margin-right: 0;
-  z-index: -1;
   display: block;
   background-image: url("../images/hero-storefront.jpg");
   height: 100%;
@@ -829,7 +849,7 @@ a:hover {
   background-position: center -10px;
 }
 @media (min-width: 480px) {
-  /* line 213, ../sass/fm-london.sass */
+  /* line 232, ../sass/fm-london.sass */
   #hero-image {
     width: 100%;
     float: left;
@@ -840,7 +860,7 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
-  /* line 213, ../sass/fm-london.sass */
+  /* line 232, ../sass/fm-london.sass */
   #hero-image {
     width: 100%;
     float: left;
@@ -851,14 +871,27 @@ a:hover {
   }
 }
 @media (min-width: 1280px) {
-  /* line 213, ../sass/fm-london.sass */
+  /* line 232, ../sass/fm-london.sass */
   #hero-image {
     background-size: 100%;
     background-position: center -170px;
   }
 }
 
-/* line 237, ../sass/fm-london.sass */
+/* line 254, ../sass/fm-london.sass */
 #hero-container {
   overflow: visible;
+}
+
+@media (min-width: 768px) {
+  /* line 257, ../sass/fm-london.sass */
+  #hero-container .second-element-B {
+    margin-top: -147px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 257, ../sass/fm-london.sass */
+  #hero-container .second-element-B {
+    margin-top: 0px;
+  }
 }

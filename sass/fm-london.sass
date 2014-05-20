@@ -3,7 +3,6 @@
 // Styles for FM grid & Container. Mobile-first approach.
 .container
   +container($mobile-landscape)
-  z-index: 1
   overflow: visible
   +clearfix
   // more mobile/iphone styles go here
@@ -122,27 +121,33 @@ a
   +span(full)
   height: 300px
   overflow: hidden
-  margin-bottom: 20px
-  z-index: -1
   +clearfix
+  +breakpoint($tablet-portrait)
+    margin-bottom: 20px
 
 .section-summary
   background-color: white
-  margin-top: -200px
-  z-index: 1
+  z-index: 10
+  position: relative
+  margin-bottom: 20px
   +span(full)
   +breakpoint($tablet-portrait)
     +span(4 of 8 last)
+    margin-top: -150px
+    margin-right: -15px
+    width: 410px
   +breakpoint($tablet-landscape)
     +span(4 of 12 last)
+    margin-top: -200px
+    margin-right: 20px
   .subwrapper
     padding: 20px
-    +breakpoint($tablet-landscape)
-      border: 14px solid $default-bg-color
+    +breakpoint($tablet-portrait)
+      border: 20px solid $default-bg-color
   h2
     font-size: 2.25em
     margin-bottom: 10px
-  h3.subheader
+  h3.sub-header
     @extend .GillSans-bold-normal
     color: $highlight-text-color
     font-size: 1.125em
@@ -158,10 +163,14 @@ a
 
 .first-element
   +span(full)
+  margin-bottom: 20px
   +breakpoint($tablet-portrait)
     +span(4 of 8)
+    margin-right: 0px
+    margin-bottom: 0px
   +breakpoint($tablet-landscape)
     +span(4 of 12)
+    margin-right: 20px
   .noticeboard-wrapper
     padding: 10px
     background-color: $info-panel-bg-color
@@ -169,6 +178,8 @@ a
     padding: 20px
     border: 1px solid $gold-button-color
     background-color: $info-panel-bg-color
+    // +breakpoint($tablet-portrait)
+    //   padding-bottom: 41px
   .noticeboard
     text-align: center
     h3
@@ -182,11 +193,15 @@ a
 
 .second-element
   +span(full)
+  margin-bottom: 20px
   +breakpoint($tablet-portrait)
     +span(full)
+    margin-right: 0px
+    margin-top: 20px
   +breakpoint($tablet-landscape)
     +span(4 of 12)
-    padding-left: 12px
+    margin-right: 0px
+    margin-top: 0px
 
 .second-element-A
   +span(full)
@@ -195,24 +210,27 @@ a
   +breakpoint($tablet-portrait)
     +span(4 of 8)
     float: left
+    margin-right: 0px
   +breakpoint($tablet-landscape)
     +span(full)
 
 .second-element-B
   +span(full)
   width: 100%
+  margin-bottom: 20px
   +breakpoint($tablet-portrait)
     +span(4 of 8 last)
     float: left
     margin-right: 0px
+    margin-left: 20px
   +breakpoint($tablet-landscape)
     +span(full)
+    margin-left: 0px
 
 // *** HERO/ABOUT section- specific styles.
 
 #hero-image
   +span(full last)
-  z-index: -1
   display: block
   background-image: url('../images/hero-storefront.jpg')
   height: 100%
@@ -233,6 +251,11 @@ a
     background-size: 100%
     background-position: center -170px
 
-
 #hero-container
   overflow: visible
+
+#hero-container .second-element-B
+  +breakpoint($tablet-portrait)
+    margin-top: -147px
+  +breakpoint ($tablet-landscape)
+    margin-top: 0px
