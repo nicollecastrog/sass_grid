@@ -1,0 +1,100 @@
+@import grids
+
+body
+  margin: 0px 0px 0px 0px
+  font-family: GillSans
+  background-color: #F7F3ED
+  color: #5E5E57
+
+//Styles for FM grid & Container. Mobile-first approach.
+.container
+  +container($mobile-landscape)
+  z-index: 1
+  overflow: visible
+  +clearfix
+  // more mobile/iphone styles go here
+  +breakpoint($tablet-portrait)
+    +container($tablet-portrait)
+    // more tablet/ipad-portrait styles go here
+  +breakpoint($tablet-landscape)
+    +container($tablet-landscape)
+    // more tablet/ipad-landscape styles go here
+
+
+// *** HERO/ABOUT section styles.
+
+.section-image
+  +span(full)
+  height: 300px
+  overflow: hidden
+  +clearfix
+
+#hero-image
+  +span(full last)
+  display: block
+  background-image: url('../images/hero-storefront.jpg')
+  height: 100%
+  background-size: 180%
+  background-repeat: no-repeat
+  background-position: center -10px
+  +breakpoint($mobile-landscape)
+    +span(full)
+    background-size: 180%
+    background-position: center -150px
+  +breakpoint($tablet-portrait)
+    +span(full)
+    background-size: 100%
+    background-position: center -100px
+  +breakpoint($tablet-landscape)
+    
+  +breakpoint($desktop)
+    background-size: 100%
+    background-position: center -170px
+
+
+#hero-container
+  overflow: visible
+
+#hero-container p
+  display: block
+
+.section-summary
+  display: inline-block
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(4 of 8 last)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12 last)
+
+.first-element
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(4 of 8)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12)
+
+.second-element
+  +span(full)
+  +breakpoint($tablet-portrait)
+    +span(full)
+  +breakpoint($tablet-landscape)
+    +span(4 of 12)
+
+.second-element-A
+  +span(full)
+  width: 100%
+  +breakpoint($tablet-portrait)
+    +span(4 of 8)
+    float: left
+  +breakpoint($tablet-landscape)
+    +span(full)
+
+.second-element-B
+  +span(full)
+  width: 100%
+  +breakpoint($tablet-portrait)
+    +span(4 of 8 last)
+    float: left
+    margin-right: 0px
+  +breakpoint($tablet-landscape)
+    +span(full)

@@ -439,12 +439,21 @@ th {
   box-sizing: border-box;
 }
 
-/* line 7, ../sass/style.sass */
+/* line 3, ../sass/fm-london.sass */
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: GillSans;
+  background-color: #f7f3ed;
+  color: #5e5e57;
+}
+
+/* line 10, ../sass/fm-london.sass */
 .container {
-  background-color: #fbeecb;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
+  overflow: visible;
   overflow: hidden;
   *zoom: 1;
 }
@@ -455,12 +464,11 @@ th {
   clear: both;
 }
 @media (min-width: 768px) {
-  /* line 7, ../sass/style.sass */
+  /* line 10, ../sass/fm-london.sass */
   .container {
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #e5faca;
   }
   /* line 12, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after {
@@ -469,13 +477,12 @@ th {
     clear: both;
   }
 }
-@media (min-width: 1280px) {
-  /* line 7, ../sass/style.sass */
+@media (min-width: 1024px) {
+  /* line 10, ../sass/fm-london.sass */
   .container {
-    max-width: 1280px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    background-color: blue;
   }
   /* line 12, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
   .container:after {
@@ -485,225 +492,195 @@ th {
   }
 }
 
-/* line 18, ../sass/style.sass */
-.ag1 {
-  background-color: #71dad2;
+/* line 26, ../sass/fm-london.sass */
+.section-image {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 18, ../sass/style.sass */
-  .ag1 {
-    width: 22.58065%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 18, ../sass/style.sass */
-  .ag1 {
-    width: 14.89362%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-}
-
-/* line 26, ../sass/style.sass */
-.ag2 {
-  background-color: #fae7b3;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 26, ../sass/style.sass */
-  .ag2 {
-    width: 48.3871%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 26, ../sass/style.sass */
-  .ag2 {
-    width: 65.95745%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-}
-
-/* line 34, ../sass/style.sass */
-.ag3 {
-  background-color: #71dad2;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 34, ../sass/style.sass */
-  .ag3 {
-    width: 22.58065%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 34, ../sass/style.sass */
-  .ag3 {
-    width: 14.89362%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-/* line 44, ../sass/style.sass */
-.ag4, .ag5, .ag8, .ag9 {
-  background-color: #ee9e9c;
-}
-
-/* line 47, ../sass/style.sass */
-.ag4 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 47, ../sass/style.sass */
-  .ag4 {
-    width: 46.66667%;
-    float: left;
-    margin-right: 6.66667%;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 47, ../sass/style.sass */
-  .ag4 {
-    width: 48.3871%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-}
-
-/* line 54, ../sass/style.sass */
-.ag5 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 54, ../sass/style.sass */
-  .ag5 {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 54, ../sass/style.sass */
-  .ag5 {
-    width: 48.3871%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-/* line 61, ../sass/style.sass */
-.ag6 {
-  background-color: #f09671;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  /* line 61, ../sass/style.sass */
-  .ag6 {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (min-width: 1280px) {
-  /* line 61, ../sass/style.sass */
-  .ag6 {
-    width: 35.48387%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-}
-
-/* line 69, ../sass/style.sass */
-.ag7 {
-  background-color: #f6d784;
+  height: 300px;
+  overflow: hidden;
   overflow: hidden;
   *zoom: 1;
+}
+
+/* line 32, ../sass/fm-london.sass */
+#hero-image {
   width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-@media (min-width: 1280px) {
-  /* line 69, ../sass/style.sass */
-  .ag7 {
-    width: 61.29032%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-/* line 77, ../sass/style.sass */
-.ag8 {
-  width: 46.66667%;
-  float: left;
-  margin-right: 6.66667%;
-}
-@media (min-width: 1280px) {
-  /* line 77, ../sass/style.sass */
-  .ag8 {
-    width: 36.84211%;
-    float: left;
-    margin-right: 5.26316%;
-  }
-}
-
-/* line 82, ../sass/style.sass */
-.ag9 {
-  width: 46.66667%;
   float: right;
   margin-right: 0;
+  display: block;
+  background-image: url("../images/hero-storefront.jpg");
+  height: 100%;
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center -10px;
+}
+@media (min-width: 480px) {
+  /* line 32, ../sass/fm-london.sass */
+  #hero-image {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 180%;
+    background-position: center -150px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 32, ../sass/fm-london.sass */
+  #hero-image {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 100%;
+    background-position: center -100px;
+  }
 }
 @media (min-width: 1280px) {
-  /* line 82, ../sass/style.sass */
-  .ag9 {
-    width: 36.84211%;
+  /* line 32, ../sass/fm-london.sass */
+  #hero-image {
+    background-size: 100%;
+    background-position: center -170px;
+  }
+}
+
+/* line 55, ../sass/fm-london.sass */
+#hero-container {
+  overflow: visible;
+}
+
+/* line 58, ../sass/fm-london.sass */
+#hero-container p {
+  display: block;
+}
+
+/* line 61, ../sass/fm-london.sass */
+.section-summary {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 61, ../sass/fm-london.sass */
+  .section-summary {
+    width: 48.3871%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 61, ../sass/fm-london.sass */
+  .section-summary {
+    width: 31.91489%;
     float: right;
     margin-right: 0;
   }
 }
 
-/* line 87, ../sass/style.sass */
-.ag10 {
-  background-color: #ea9fc3;
+/* line 69, ../sass/fm-london.sass */
+.first-element {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 69, ../sass/fm-london.sass */
+  .first-element {
+    width: 48.3871%;
+    float: left;
+    margin-right: 3.22581%;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 69, ../sass/fm-london.sass */
+  .first-element {
+    width: 31.91489%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 }
 
-/* line 92, ../sass/style.sass */
-h2 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
+/* line 76, ../sass/fm-london.sass */
+.second-element {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 76, ../sass/fm-london.sass */
+  .second-element {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 76, ../sass/fm-london.sass */
+  .second-element {
+    width: 31.91489%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+}
+
+/* line 83, ../sass/fm-london.sass */
+.second-element-A {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 83, ../sass/fm-london.sass */
+  .second-element-A {
+    width: 48.3871%;
+    float: left;
+    margin-right: 3.22581%;
+    float: left;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 83, ../sass/fm-london.sass */
+  .second-element-A {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 92, ../sass/fm-london.sass */
+.second-element-B {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 92, ../sass/fm-london.sass */
+  .second-element-B {
+    width: 48.3871%;
+    float: right;
+    margin-right: 0;
+    float: left;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 92, ../sass/fm-london.sass */
+  .second-element-B {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
